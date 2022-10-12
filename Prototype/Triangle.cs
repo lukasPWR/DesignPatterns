@@ -15,7 +15,13 @@ namespace Prototype
 
         public override Shape Clone()
         {
-            return (Triangle)this.MemberwiseClone();
+            Triangle  cloneBase =  (Triangle)this.MemberwiseClone();
+            cloneBase.Border = new Border()
+            {
+                Size = Border.Size,
+                Color = Border.Color
+            };
+            return cloneBase;
         }
     }
 }
