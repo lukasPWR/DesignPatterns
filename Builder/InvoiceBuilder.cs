@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Builder
 {
-    internal class InvoiceBuilder : IInvoiceBuilder
+    internal class InvoiceBuilder
     {
         private Invoice _invoice = new Invoice();
 
@@ -21,11 +21,9 @@ namespace Builder
 
             return this;
         }
-
         public InvoiceBuilder SetVendee(string vendee)
         {
             _invoice.Vendee = vendee;
-
             return this;
 
         }
@@ -33,33 +31,25 @@ namespace Builder
         public InvoiceBuilder SetNote(string note)
         {
             _invoice.Note = note;
-
             return this;
-
         }
 
-        public InvoiceBuilder SetLinetItems(IEnumerable<string> lineItems)
+        public InvoiceBuilder SetLineItems(IEnumerable<string> lineItems)
         {
             _invoice.LineItems = lineItems;
-
             return this;
-
         }
 
         public InvoiceBuilder SetInvoiceNumber(string number)
         {
             _invoice.Number = number;
-
             return this;
-
         }
 
         public InvoiceBuilder SetDate(DateTime date)
         {
             _invoice.Date = date;
-
             return this;
-
         }
     }
 }
