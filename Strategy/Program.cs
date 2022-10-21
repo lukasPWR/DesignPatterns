@@ -4,7 +4,7 @@ using Strategy;
 Console.WriteLine("Hello, World!");
 
 
-var strategy = new BikeStrategy();
+var strategy = new CarStrategy();
 
 var map = new Map(strategy);
 
